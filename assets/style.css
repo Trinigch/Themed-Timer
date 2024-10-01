@@ -76,13 +76,10 @@ main {
     background-color: crimson;
     align-items: center;
     height: 300px;
-    width: 400px;
+    width: 300px;
+    border-radius: 300px;
     justify-content: center;
     justify-self: center;
-}
-
-#the-clock {
-    flex: 1 1;
 }
 
 .clock-area h2 {
@@ -109,34 +106,88 @@ main {
     background-color: var(--dark-background);
     color: var(--dark-highlight);
     border-color: var(--dark-accent);
+}
 
+.dark .sidebar {
+    background-color: var(--dark-background);
+}
+
+.dark .clock-container {
+    background-color: var(--dark-background);
+    color: var(--dark-highlight);
+    border-color: var(--dark-accent);
+}
+
+.dark .theme-container {
+    background-color: var(--dark-background);
 }
 
 .light {
     background-color: var(--light-background);
     color: var(--light-highlight);
     border-color: var(--light-accent);
+}
 
 
+.light .sidebar {
+    background-color: var(--light-background);
+}
+
+.light .clock-container {
+    background-color: var(--light-background);
+    color: var(--light-highlight);
+    border-color: var(--light-accent);
+}
+
+.light .theme-container {
+    background-color: var(--light-background);
 }
 
 .warm {
     background-color: var(--warm-background);
     color: var(--warm-highlight);
     border-color: var(--warm-accent);
-
 }
 
+.warm .sidebar {
+    background-color: var(--warm-background);
+}
+
+.warm .clock-container {
+    background-color: var(--warm-background);
+    color: var(--warm-highlight);
+    border-color: var(--warm-accent);
+}
+
+.warm .theme-container {
+    background-color: var(--warm-background);
+}
 
 .cool {
     background-color: var(--cool-background);
     color: var(--cool-highlight);
     border-color: var(--cool-accent);
-
 }
 
+.cool .sidebar {
+    background-color: var(--cool-background);
+}
 
+.cool .clock-container {
+    background-color: var(--cool-accent);
+    color: var(--cool-highlight);
+    border-color: var(--cool-accent);
+    
+}
+
+.cool .theme-container {
+    background-color: var(--cool-background);
+}
 /* ID's */
+
+#the-clock {
+    flex: 1 1;
+}
 
 #set-button, #start-button {
     background-color: white;
