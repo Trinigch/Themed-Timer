@@ -19,8 +19,6 @@
     --cool-highlight: #FFE1FF;
 }
 
-
-
 /* tags */
 
 main {
@@ -39,7 +37,7 @@ main {
     flex-grow: 0;
     flex-shrink: 0;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: cadetblue;
     width: 50px;
     height: 300px;
@@ -48,6 +46,21 @@ main {
     align-items: center;
     border-radius: 8px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.theme-button-container {
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.function-button-container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+
 }
 
 .button {
@@ -114,6 +127,7 @@ main {
     color: var(--light-highlight);
     border-color: var(--light-accent);
 }
+
 
 .light .sidebar {
     background-color: var(--light-background);
@@ -246,13 +260,33 @@ main {
     }
 
     .sidebar {
-        flex-direction: row;
         width: 300px;
-        height: 50px;
+        height: 100px;
         align-items: center;
     }
 
     .clock-area h2 {
         font-size: 120px;
+        text-align: center;
+    }
+
+    .theme-button-container {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .function-button-container {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .button {
+        flex: 1;
+        margin: 0 5px 0 5px;
     }
 }
