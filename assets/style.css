@@ -1,10 +1,11 @@
 
 main {
     display: flex;
-    height: 98vh;
+    height: 100vh;
     flex-wrap: wrap;
     background-color: aquamarine;
     align-items: center;
+    justify-content: center;
 }
 
 .sidebar {
@@ -36,29 +37,39 @@ main {
     font-size: 20px;
 }
 
-#theme1 {
+#lightB {
     background-color: antiquewhite;
 }
 
-#theme2 {
+#darkB {
     background-color: black;
 }
 
-#theme3 {
+#warmB {
     background-color: orangered;
 }
 
-#theme4 {
+#coolB {
     background-color: blueviolet;
 }
 
-.clock-area {
-    flex: 1;
+.clock-container {
+    display: flex;
+    flex-direction: row;
     background-color: crimson;
+    align-items: center;
+    height: 300px;
+    width: 50%;
+    justify-content: center;
+    justify-self: center;
+}
+
+#the-clock {
+    flex: 1 1;
 }
 
 .clock-area h2 {
-    font-size: 200px;
+    font-size: 100%;
     text-align: center;
 }
 
@@ -69,6 +80,11 @@ main {
 @media screen and (max-width: 768px) {
     main {
         flex-direction: column;
+        justify-content: start;
+    }
+
+    .clock-container {
+        width: 100vw;
     }
 
     .sidebar {
@@ -110,13 +126,13 @@ main {
 
 }
 
-body {
+/* body {
 
 }
 
-aside {}
+aside {} */
 
-.container {
+/* .container {
     display: flex;
 }
 
@@ -125,7 +141,7 @@ aside {}
 
 }
 
-/* Aside Button Styles for Theme picker */
+/* Aside Button Styles for Theme picker
 .darkB button {
     background: radial-gradient(circle, var(--dark-background) 0%, var(--dark-accent) 50%, var(--dark-highlight) 100%);
     border-color: var(--dark-highlight);
@@ -160,7 +176,7 @@ aside {}
     height: 50px;
 }
 
-/*Theme Styles */
+/*Theme Styles
 .dark {
     background-color: var(--dark-background);
     color: var(--dark-highlight);
@@ -202,4 +218,4 @@ aside {}
     justify-content: center;
     align-items: center;
     padding: 150px;
-  }
+  } */

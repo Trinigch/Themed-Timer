@@ -14,24 +14,26 @@
     </header>
     <main>
         <section class="sidebar">
-            <div id="theme1" class="button"></div>
-            <div id="theme2" class="button"></div>
-            <div id="theme3" class="button"></div>
-            <div id="theme4" class="button"></div>
-            <div id="set-button" class="button">
-                <p>Set</p>
+            <div class="theme-button-container">
+                <button id="lightB" class="button"></button>
+                <button id="darkB" class="button"></button>
+                <button id="warmB" class="button"></button>
+                <button id="coolB" class="button"></button>
             </div>
-            <div id="start-button" class="button">
-                <p>Go</p>
+            <div class="function-button-container">
+                <button id="set-button" class="button"></button>
+                <button id="start-button" class="button"></button>
             </div>
         </section>
 
-        <section class="clock-area">
-            <h2>4:54</h2>
+        <section class="clock-container">
+            <div id="the-clock">
+                <h2>4:54</h2>
+            </div>
         </section>
     </main>
   
-      <div class="theme-container">
+      <!-- <div class="theme-container">
         <div id="clock"><h1>12:00</h1></div>
     </div>
     
@@ -48,7 +50,7 @@
         <div class="coolB">
             <button type="button"></button>
         </div>
-    </aside>
+    </aside> -->
   
     <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
