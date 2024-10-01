@@ -176,7 +176,7 @@ main {
     background: radial-gradient(circle, var(--cool-background) 0%, var(--cool-accent) 70%, var(--cool-highlight) 100%);
     border-radius: 25px;
     margin: 5px;
-
+}
 #clock {
     background: linear-gradient(
       var(--light-accent), 
@@ -205,3 +205,4 @@ main {
     .clock-area h2 {
         font-size: 120px;
     }
+}
