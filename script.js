@@ -4,7 +4,7 @@ const themeButtonL = document.querySelector('#lightB');
 const themeButtonW = document.querySelector('#warmB');
 const themeButtonC = document.querySelector('#coolB');
 
-let currentTheme = "none";
+let currentTheme = "dark";
 
 function changeTheme (theme) {
     document.body.className = '';
@@ -31,6 +31,8 @@ themeButtonC.addEventListener('click', function () {
     changeTheme('cool');
 }
 )
+
+changeTheme(currentTheme);
 /*
 const container = document.querySelector('.theme-container');
 const button = document.querySelectorAll('button');
