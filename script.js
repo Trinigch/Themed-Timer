@@ -1,28 +1,34 @@
 
-const themeButton1 = document.querySelector('#darkB');
-const themeButton2 = document.querySelector('#lightB');
-const themeButton3 = document.querySelector('#warmB');
-const themeButton4 = document.querySelector('#coolB');
+const themeButtonD = document.querySelector('#darkB');
+const themeButtonL = document.querySelector('#lightB');
+const themeButtonW = document.querySelector('#warmB');
+const themeButtonC = document.querySelector('#coolB');
 
 let currentTheme = "none";
 
-themeButton1.addEventListener('click', function () {
-    alert('button clicked');
+function changeTheme (theme) {
+    document.body.className = '';
+    document.body.classList.add(theme);
+    currentTheme = theme;
+}
+
+themeButtonD.addEventListener('click', function () {
+    changeTheme('dark');
 }
 )
 
-themeButton2.addEventListener('click', function () {
-    alert('button clicked');
+themeButtonL.addEventListener('click', function () {
+    changeTheme('light');
 }
 )
 
-themeButton3.addEventListener('click', function () {
-    alert('button clicked');
+themeButtonW.addEventListener('click', function () {
+    changeTheme('warm');
 }
 )
 
-themeButton4.addEventListener('click', function () {
-    alert('button clicked');
+themeButtonC.addEventListener('click', function () {
+    changeTheme('cool');
 }
 )
 /*
