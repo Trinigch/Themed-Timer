@@ -25,10 +25,11 @@
 
 main {
     display: flex;
-    height: 98vh;
+    height: 100vh;
     flex-wrap: wrap;
     background-color: aquamarine;
     align-items: center;
+    justify-content: center;
 }
 
 /* classes */
@@ -56,13 +57,23 @@ main {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.clock-area {
-    flex: 1;
+.clock-container {
+    display: flex;
+    flex-direction: row;
     background-color: crimson;
+    align-items: center;
+    height: 300px;
+    width: 50%;
+    justify-content: center;
+    justify-self: center;
+}
+
+#the-clock {
+    flex: 1 1;
 }
 
 .clock-area h2 {
-    font-size: 200px;
+    font-size: 100%;
     text-align: center;
 }
 
@@ -80,7 +91,7 @@ main {
 
 }
 
-/*Theme Styles */
+/*Theme Styles
 .dark {
     background-color: var(--dark-background);
     color: var(--dark-highlight);
