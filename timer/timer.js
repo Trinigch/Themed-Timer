@@ -12,6 +12,7 @@ timerDisplay.textContent = `${hours.toString().padStart(2,'0')}:${minutes.toStri
 };
 
 setButton.addEventListener('click', () => {
+  clearInterval(countdownInterval);
   let timeInMinutes = parseInt(minutesInput.value);
   if (isNaN(timeInMinutes) || timeInMinutes <= 0) {
     alert('Please enter a valid number of minutes.');
@@ -22,6 +23,7 @@ setButton.addEventListener('click', () => {
 })
 
 startButton.addEventListener('click', () => {
+  clearInterval(countdownInterval);
   let timeInMinutes = parseInt(minutesInput.value);
   if (isNaN(timeInMinutes) || timeInMinutes <= 0) {
     alert('Please enter a valid number of minutes.');
@@ -30,7 +32,7 @@ startButton.addEventListener('click', () => {
 
   let timeInSeconds = timeInMinutes * 60;
   
-  clearInterval(countdownInterval);
+ // clearInterval(countdownInterval);
   
   countdownInterval = setInterval(() => {
     
