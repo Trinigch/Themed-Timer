@@ -2,6 +2,10 @@ const minutesInput = document.querySelector('#number');
 const startButton = document.querySelector('#start');
 const timerDisplay = document.querySelector('#minutes');
 const setButton = document.querySelector('#set');
+
+const modal = document.getElementById("myModal");
+const openBtn = document.getElementById("openModalBtn");
+const closeBtn = document.getElementsByClassName("close")[0];
 let countdownInterval;
 function updateTimerDisplay(timeInSeconds) {
 
@@ -46,3 +50,22 @@ startButton.addEventListener('click', () => {
 
       }, 1000); 
     });
+
+
+
+// Modal
+openBtn.onclick = function() {
+    modal.style.display = "block";
+}
+
+//  close modal when click on "X"
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// close modal whene click outside this
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

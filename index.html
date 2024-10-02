@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./timer/timer.css" />
     <title>Themed Timer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
@@ -18,11 +19,22 @@
                 <div id="coolB" class="button"></div>
             </div>
             <div class="function-button-container">
-                <button id="set-button" class="button control">&#10010</button>
-                <button id="start-button" class="button control">&#10095</button>
+                 <!--<button id="set-button" class="button control">&#10010</button>-->
+                 <button id="openModalBtn" class="button control">&#10010</button>
+                 <button id="start-button" class="button control">&#10095</button>
             </div>
         </section>
-
+        <section>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <label id="minutes"></label>
+                    <input type="number" id="number"  placeholder="Enter time here" value="" />
+                    <button id="set">SET</button>  
+                    <button id="start" >START</button>  
+                </div>
+            </div>
+        </section>
         <section class="clock-container">
             <div id="the-clock">
                 <h2>01:04:54</h2>
@@ -30,6 +42,7 @@
         </section>
     </main>
 
+    <script src="./timer/timer.js"></script>
     <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
