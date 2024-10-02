@@ -160,7 +160,7 @@
 
 .warm .button.control {
     background-color: var(--warm-button);
-    color: var(--warm-highlight);
+    color: var(--warm-background);
     border-color: var(--warm-highlight);
 }
 
