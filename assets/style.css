@@ -26,20 +26,19 @@
 .sidebar {
     display: flex;
     position: fixed;
-    z-index: 1;
-    left: 0;
+    left: 5px;
     top: 50%;
     transform: translate(0,-50%);
     flex-direction: column;
     justify-content: space-evenly;
     width: 50px;
     height: 300px;
-    margin: 10px;
     align-content: center;
     align-items: center;
     border-radius: 8px;
     background-color: rgb(255, 255, 255, 0.2);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: all 300ms;
 }
 
 .theme-button-container {
@@ -54,7 +53,7 @@
     flex-grow: 1;
     flex-direction: column;
     justify-content: space-evenly;
-
+    transition: all 300ms;
 }
 
 .button {
@@ -62,6 +61,7 @@
     width: 40px;
     border-radius: 8px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    cursor: pointer;
 }
 
 .clock-container {
@@ -72,19 +72,21 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 300px;
-    width: 300px;
-    border-radius: 300px;
+    height: 400px;
+    width: 400px;
+    border-radius: 400px;
+    transition: all 300ms;
 }
 
 .clock-container h2 {
-    font-size: 45px;
+    font-size: 60px;
     text-shadow: 2px 2px 2px #03030366;
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    transition: all 300ms;
 }
 
 .button:hover {
@@ -197,6 +199,36 @@
     font-size: 20px;
 }
 
+#set-button:hover::after {
+    content: "Set a new timer";
+    position: absolute;
+    left: 54px;
+    bottom: 46px;
+    min-width: 120px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255, 0.3);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 5px;
+    font-size: 80%;
+    color: black;
+    z-index: 1;
+  }
+
+#start-button:hover::after {
+    content: "Start timer";
+    position: absolute;
+    left: 54px;
+    bottom: 4px;
+    min-width: 120px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255, 0.3);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 5px;
+    font-size: 80%;
+    color: black;
+    z-index: 1;
+  }
+
 /* Aside Id's for Button Styles for Theme picker */
 #darkB {
     background: radial-gradient(circle, var(--dark-background) 0%, var(--dark-accent) 50%, var(--dark-highlight) 100%);
@@ -240,20 +272,23 @@
 
     .sidebar {
         width: 300px;
-        height: 100px;
+        height: 110px;
         align-items: center;
-        top: 0;
+        top: 5px;
         left: 50%;
         transform: translate(-50%,0%);
     }
 
     .clock-container {
-        top: 120px;
+        top: 200px;
         transform: translate(-50%, 0%);
+        height: 300px;
+        width: 300px;
+        border-radius: 300px;
     }
       
-    .clock-area h2 {
-        font-size: 120px;
+    .clock-container h2 {
+        font-size: 45px;
         text-align: center;
     }
 
@@ -274,6 +309,16 @@
     
     #start-button, #set-button {
         flex: 1;
-        margin: 0 5px 0 5px;
+        margin: 0 5px 2px 5px;
     }
+
+    #set-button:hover::after {
+        bottom: -45px;
+        left: 15px;
+      }
+    
+    #start-button:hover::after {
+        bottom: -45px;
+        left: 165px;
+      }
 }
