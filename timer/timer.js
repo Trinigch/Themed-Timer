@@ -1,11 +1,18 @@
 const minutesInput = document.querySelector('#number');
 const startButton = document.querySelector('#start');
-const timerDisplay = document.querySelector('#minutes');
 const setButton = document.querySelector('#set');
+
+
+const mainTimerDisplay = document.querySelector('#main-timer-display');
+const timerDisplay = document.querySelector('#minutes');
 
 const modal = document.getElementById("myModal");
 const openBtn = document.getElementById("openModalBtn");
 const closeBtn = document.getElementsByClassName("close")[0];
+
+
+
+
 let countdownInterval;
 function updateTimerDisplay(timeInSeconds) {
 
@@ -13,6 +20,7 @@ function updateTimerDisplay(timeInSeconds) {
   const minutes = Math.floor((timeInSeconds % 3600)/ 60) ;
   const seconds = timeInSeconds % 60;
 timerDisplay.textContent = `${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+mainTimerDisplay.textContent = `${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 };
 
 setButton.addEventListener('click', () => {
@@ -45,6 +53,7 @@ startButton.addEventListener('click', () => {
       if (timeInSeconds < 0) {
         clearInterval(countdownInterval);
         timerDisplay.textContent = '00:00:00';
+        mainTimerDisplay.textContent = '00:00:00';
         alert('Time is up!');
       }
 
