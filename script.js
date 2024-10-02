@@ -4,12 +4,13 @@ const themeButtonL = document.querySelector('#lightB');
 const themeButtonW = document.querySelector('#warmB');
 const themeButtonC = document.querySelector('#coolB');
 
-let currentTheme = "dark";
+let currentTheme = localStorage.getItem('theme') || "dark";
 
 function changeTheme (theme) {
     document.body.className = '';
     document.body.classList.add(theme);
     currentTheme = theme;
+    localStorage.setItem('theme', theme);
 }
 
 themeButtonD.addEventListener('click', function () {
@@ -33,23 +34,3 @@ themeButtonC.addEventListener('click', function () {
 )
 
 changeTheme(currentTheme);
-/*
-const container = document.querySelector('.theme-container');
-const button = document.querySelectorAll('button');
-
-let themeStored = localStorage.getItem('themeStored') || 'light';
-container.classList.add(themeStored);
-
-
-buttons.forEach(button => {
-    button.addEventListener('click', function(){
-        const themeClass = this.className;
-
-        container.classList.remove('light', 'dark', 'warm', 'cool');
-
-        container.classList.add(themeClass.replace('B', ''));
-        
-        localStorage.setItem('themeStored', themeClass.replace('B', ''));
-    });
-});
-*/
