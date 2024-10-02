@@ -200,18 +200,39 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
 }
-
+ 
+/* modal styling */
 .modal-content {
-    background-color: white;
     margin: 15% auto;
     padding: 20px;
     width: 80%;
     max-width: 500px;
     border-radius: 8px;
+    text-align: center;
 }
 
+.dark .modal-content {
+    background: var(--dark-button);
+    color: var(--dark-background);
+}
+.light .modal-content {
+    background: var(--light-button);
+    color: var(--light-background);
+}
+.warm .modal-content {
+    background: var(--warm-button);
+    color: var(--warm-background);
+}
+.cool .modal-content {
+    background: var(--cool-button);
+    color: var(--cool-background);
+}
+
+
 .close {
-    color: red;
+    display: flex;
+    flex-direction: row-reverse;
+    color: rgb(0, 0, 0);
     float: right;
     font-size: 24px;
     cursor: pointer;
