@@ -3,7 +3,7 @@
 :root {
     --light-background: #A1D6B2;
     --light-accent: #CEDF9F;
-    --light-button: #E8B86D;
+    --light-button: #339167;
     --light-highlight: #F1F3C2;
     --dark-background: #1E201E;
     --dark-accent: #3C3D37;
@@ -116,7 +116,7 @@
 .dark .button.control {
     background-color: var(--dark-button);
     color: var(--dark-highlight);
-    border-color: var(--dark-accent);
+    border-color: var(--dark-highlight);
 }
 
 .light {
@@ -141,9 +141,9 @@
 }
 
 .light .button.control {
-    background-color: var(--light-button);
-    color: var(--light-highlight);
-    border-color: var(--light-accent);
+    background-color: var(--light-accent);
+    color: var(--light-button);
+    border-color: var(--light-highlight);
 }
 
 .warm {
@@ -169,7 +169,7 @@
 .warm .button.control {
     background-color: var(--warm-button);
     color: var(--warm-highlight);
-    border-color: var(--warm-accent);
+    border-color: var(--warm-highlight);
 }
 
 .cool {
@@ -194,9 +194,9 @@
 }
 
 .cool .button.control {
-    background-color: var(--cool-button);
+    background-color: var(--cool-accent);
     color: var(--cool-highlight);
-    border-color: var(--cool-accent);
+    border-color: var(--cool-highlight);
 }
 /* ID's */
 
