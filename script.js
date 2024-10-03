@@ -6,7 +6,7 @@ const themeButtonC = document.querySelector('#coolB');
 
 let currentTheme = localStorage.getItem('theme') || "dark";
 
-function changeTheme (theme) {
+function changeTheme(theme) {
     document.body.className = '';
     document.body.classList.add(theme);
     currentTheme = theme;

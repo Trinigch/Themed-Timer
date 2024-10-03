@@ -19,8 +19,6 @@
     --cool-highlight: #FFE1FF;
 }
 
-/* tags */
-
 /* classes */
 
 .sidebar {
@@ -28,7 +26,7 @@
     position: fixed;
     left: 5px;
     top: 50%;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     flex-direction: column;
     justify-content: space-evenly;
     width: 50px;
@@ -68,7 +66,7 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -85,7 +83,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     transition: all 300ms;
 }
 
@@ -145,10 +143,12 @@
     color: var(--light-button);
     border-color: var(--light-highlight);
 }
+
 .light input {
     background-color: var(--light-highlight);
     border-color: var(--light-accent);
 }
+
 .warm {
     background-color: var(--warm-background);
     color: var(--warm-highlight);
@@ -170,10 +170,12 @@
     color: var(--warm-background);
     border-color: var(--warm-highlight);
 }
+
 .warm input {
     background-color: var(--warm-highlight);
     border-color: var(--warm-background);
 }
+
 .cool {
     background-color: var(--cool-background);
     color: var(--cool-highlight);
@@ -184,7 +186,7 @@
     background: radial-gradient(circle, var(--cool-accent) 50%, var(--cool-highlight) 55%, var(--cool-background) 59%);
     color: var(--cool-highlight);
     border-color: var(--cool-accent);
-    
+
 }
 
 .cool .theme-container {
@@ -196,24 +198,26 @@
     color: var(--cool-highlight);
     border-color: var(--cool-highlight);
 }
+
 .cool input {
     background-color: var(--cool-highlight);
     border-color: var(--cool-background);
 }
 
-
 /*modal*/
 .modal {
-    display: none; /* hidden by default*/
+    display: none;
+    /* hidden by default*/
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Transparent background */
 }
- 
+
 /* modal styling */
 .modal-content {
     margin: 15% auto;
@@ -228,19 +232,21 @@
     background: var(--dark-button);
     color: var(--dark-background);
 }
+
 .light .modal-content {
     background: var(--light-button);
     color: var(--light-background);
 }
+
 .warm .modal-content {
     background: var(--warm-button);
     color: var(--warm-background);
 }
+
 .cool .modal-content {
     background: var(--cool-button);
     color: var(--cool-background);
 }
-
 
 .close {
     display: flex;
@@ -249,6 +255,7 @@
     font-size: 24px;
     cursor: pointer;
 }
+
 /* ID's */
 
 #the-clock {
@@ -256,7 +263,8 @@
     text-align: center;
 }
 
-.set-button, .start-button {
+.set-button,
+.start-button {
     text-align: center;
     text-justify: center;
     font-size: 20px;
@@ -275,7 +283,7 @@
     font-size: 80%;
     color: black;
     z-index: 1;
-  }
+}
 
 .start-button:hover::after {
     content: "Start timer";
@@ -290,7 +298,7 @@
     font-size: 80%;
     color: black;
     z-index: 1;
-  }
+}
 
 /* Aside Id's for Button Styles for Theme picker */
 #darkB {
@@ -321,14 +329,19 @@
     border-radius: 25px;
     margin: 5px;
 }
+
 #clock {
-    background: linear-gradient(
-      var(--light-accent), 
-      var(--light-button), 
-      var(--light-highlight)
-    );
+    background: linear-gradient(var(--light-accent),
+            var(--light-button),
+            var(--light-highlight));
     clip-path: circle(9rem at center);
     padding: 150px;
+}
+
+#set,
+#number {
+    margin: 5px 75px 0px 75px;
+    border-radius: 8px;
 }
 
 /* start button ID in modal */
@@ -365,7 +378,7 @@
         align-items: center;
         top: 5px;
         left: 50%;
-        transform: translate(-50%,0%);
+        transform: translate(-50%, 0%);
     }
 
     .clock-container {
@@ -375,7 +388,7 @@
         width: 300px;
         border-radius: 300px;
     }
-      
+
     .clock-container h2 {
         font-size: 45px;
         text-align: center;
@@ -395,8 +408,9 @@
         align-items: center;
         width: 100%;
     }
-    
-    .start-button, .set-button {
+
+    .start-button,
+    .set-button {
         flex: 1;
         margin: 0 5px 2px 5px;
     }
@@ -404,10 +418,10 @@
     .set-button:hover::after {
         bottom: -45px;
         left: 15px;
-      }
-    
+    }
+
     .start-button:hover::after {
         bottom: -45px;
         left: 165px;
-      }
+    }
 }
