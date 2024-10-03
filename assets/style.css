@@ -147,6 +147,7 @@
 }
 .light input {
     background-color: var(--light-highlight);
+    border-color: var(--light-accent);
 }
 .warm {
     background-color: var(--warm-background);
@@ -171,6 +172,7 @@
 }
 .warm input {
     background-color: var(--warm-highlight);
+    border-color: var(--warm-background);
 }
 .cool {
     background-color: var(--cool-background);
@@ -196,6 +198,7 @@
 }
 .cool input {
     background-color: var(--cool-highlight);
+    border-color: var(--cool-background);
 }
 
 
@@ -334,21 +337,25 @@
 .dark #set {
     background-color: var(--dark-background);
     color: var(--dark-highlight);
+    border-color: var(--dark-button);
 }
 
 .light #set {
     background-color: var(--light-accent);
     color: var(--light-button);
+    border-color: var(--light-highlight);
 }
 
 .warm #set {
     background-color: var(--warm-background);
     color: var(--warm-highlight);
+    border-color: var(--warm-highlight);
 }
 
 .cool #set {
     background-color: var(--cool-background);
     color: var(--cool-highlight);
+    border-color: var(--cool-button);
 }
 
 @media screen and (max-width: 768px) {
