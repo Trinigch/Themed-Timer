@@ -337,7 +337,7 @@
 }
 
 .light #set {
-    background-color: var(--light-highlight);
+    background-color: var(--light-accent);
     color: var(--light-button);
 }
 
