@@ -5,6 +5,7 @@ const setButton = document.querySelector('#set');
 
 const mainTimerDisplay = document.querySelector('#main-timer-display');
 const timerDisplay = document.querySelector('#minutes');
+const tabTitle = document.querySelector('title');
 
 const modal = document.getElementById("myModal");
 const openBtn = document.getElementById("openModalBtn");
@@ -20,6 +21,7 @@ function updateTimerDisplay(timeInSeconds) {
   const timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   timerDisplay.textContent = timeString;
   mainTimerDisplay.textContent = timeString;
+  tabTitle.textContent = 'Themed Timer-' + timeString;
 };
 
 setButton.addEventListener('click', () => {
